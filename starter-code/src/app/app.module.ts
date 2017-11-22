@@ -2,12 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import  {Routes} from' @angular/router'
+import  {Routes} from '@angular/router'
 
-const routes: Routes = [
+const Routes: Routes = [
  { path: '', redirectTo: 'home', pathMatch: 'full' },
- { path: 'home',  component: my-home-componen },
- { path: 'movie/:id', component: my-movie-component }
+ { path: 'home',  component: MyHomeComponenComponent  },
+ { path: 'movie/:id', component:  MyMovieComponentComponent }
 ];
 import { AppComponent } from './app.component';
 import { MyHomeComponenComponent } from './my-home-componen/my-home-componen.component';
