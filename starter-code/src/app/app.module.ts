@@ -9,6 +9,7 @@ const Routes: Routes = [
  { path: 'home',  component: MyHomeComponenComponent  },
  { path: 'movie/:id', component:  MyMovieComponentComponent }
 ];
+
 import { AppComponent } from './app.component';
 import { MyHomeComponenComponent } from './my-home-componen/my-home-componen.component';
 import { MyMovieComponentComponent } from './my-movie-component/my-movie-component.component';
@@ -28,14 +29,3 @@ import { MyMovieComponentComponent } from './my-movie-component/my-movie-compone
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
-
-
-
-
-
-const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home',  component: MyHomeComponent },
-  { path: 'about', component: MyAboutComponent }
-];
