@@ -2,30 +2,33 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import  {Routes} from '@angular/router'
+import {RouterModule, Routes} from '@angular/router';
+
+import { AppComponent } from './app.component';
+import { MyHomeComponent } from './my-home-componen/my-home-componen.component';
+import { MyMovieComponent } from './my-movie-component/my-movie-component.component';
+import {CinemaSevice} from './service/cinema.service'
 
 const Routes: Routes = [
  { path: '', redirectTo: 'home', pathMatch: 'full' },
- { path: 'home',  component: MyHomeComponenComponent  },
- { path: 'movie/:id', component:  MyMovieComponentComponent }
+ { path: 'home',  component: MyHomeComponent  },
+ { path: 'movie/:id', component:  MyMovieComponent }
 ];
 
-import { AppComponent } from './app.component';
-import { MyHomeComponenComponent } from './my-home-componen/my-home-componen.component';
-import { MyMovieComponentComponent } from './my-movie-component/my-movie-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyHomeComponenComponent,
-    MyMovieComponentComponent
+    MyHomeComponent,
+    MyMovieComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(Routes)
   ],
-  providers: [],
+  providers: [CinemaSevice],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
